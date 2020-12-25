@@ -1,0 +1,13 @@
+For Reference:
+- https://docs.aws.amazon.com/lambda/latest/dg/python-package.html
+
+- https://docs.aws.amazon.com/lambda/latest/dg/code-editor.html
+
+- https://docs.aws.amazon.com/lambda/latest/dg/services-rds-tutorial.html
+
+
+x <- "add.txt.zip"
+x1 <- lapply(strsplit(x, ''), function(x) which(x == '.'))
+y1 <- x1[[1]][length(x1[[1]])]
+substr(x, y1, nchar(x))
+

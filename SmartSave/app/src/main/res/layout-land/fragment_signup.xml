@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/ord_txt">
+
+        <ImageView
+            android:layout_width="150sp"
+            android:layout_height="120sp"
+            android:id="@+id/iconimg"
+            app:srcCompat="@drawable/ic_app_name_v1"
+            android:contentDescription="Nav Header"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/signupform"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="20dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/signupform"
+            app:layout_constraintStart_toEndOf="@+id/iconimg"
+            app:layout_constraintEnd_toEndOf="parent">
+        <TextView
+            android:layout_width="@dimen/textbox_wdth"
+            android:layout_height="wrap_content"
+            android:id="@+id/name"
+            android:text="Username: "
+            android:textSize="@dimen/ord_txt"
+            app:layout_constraintEnd_toStartOf="@+id/inp_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/inp_name"
+            android:layout_marginEnd="@dimen/cc_wdth"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:layout_width="@dimen/editbox_wdth"
+            android:layout_height="wrap_content"
+            android:id="@+id/inp_name"
+            android:text=""
+            android:textSize="@dimen/ord_txt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/name"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="@dimen/cc_wdth"
+            android:textColor="@color/black"/>
+
+
+            <TextView
+                android:layout_width="@dimen/textbox_wdth"
+                android:layout_height="wrap_content"
+                android:id="@+id/phNum"
+                android:text="Phone Number: "
+                android:textSize="@dimen/ord_txt"
+                app:layout_constraintEnd_toStartOf="@+id/inp_phNum"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inp_name"
+                app:layout_constraintBottom_toBottomOf="@+id/inp_phNum"
+                android:layout_marginEnd="@dimen/cc_wdth"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:layout_width="@dimen/cc_wdth"
+                android:layout_height="wrap_content"
+                android:id="@+id/inp_country_code"
+                android:text="+91"
+                android:editable="false"
+                android:textSize="@dimen/ord_txt"
+                app:layout_constraintEnd_toStartOf="@+id/inp_phNum"
+                app:layout_constraintStart_toEndOf="@+id/phNum"
+                app:layout_constraintTop_toBottomOf="@+id/inp_name"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:layout_width="@dimen/editbox_wdth"
+                android:layout_height="wrap_content"
+                android:id="@+id/inp_phNum"
+                android:text=""
+                android:textSize="@dimen/ord_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/phNum"
+                app:layout_constraintTop_toBottomOf="@+id/inp_name"
+                android:layout_marginEnd="@dimen/cc_wdth"
+                android:textColor="@color/black"/>
+
+
+
+            <TextView
+                android:layout_width="@dimen/textbox_wdth"
+                android:layout_height="wrap_content"
+                android:id="@+id/emailId"
+                android:text="Email ID: "
+                android:textSize="@dimen/ord_txt"
+                app:layout_constraintEnd_toStartOf="@+id/inp_emailId"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inp_phNum"
+                app:layout_constraintBottom_toBottomOf="@+id/inp_emailId"
+                android:layout_marginEnd="@dimen/cc_wdth"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:layout_width="@dimen/editbox_wdth"
+                android:layout_height="wrap_content"
+                android:id="@+id/inp_emailId"
+                android:text=""
+                android:textSize="@dimen/ord_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/emailId"
+                app:layout_constraintTop_toBottomOf="@+id/inp_phNum"
+                android:layout_marginEnd="@dimen/cc_wdth"
+                android:textColor="@color/black"/>
+
+
+            <TextView
+            android:layout_width="@dimen/textbox_wdth"
+            android:layout_height="wrap_content"
+            android:id="@+id/password"
+            android:text="Password: "
+            android:textSize="@dimen/ord_txt"
+            app:layout_constraintEnd_toStartOf="@+id/inp_emailId"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inp_emailId"
+            app:layout_constraintBottom_toBottomOf="@+id/inp_Password"
+            android:layout_marginEnd="@dimen/cc_wdth"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:layout_width="@dimen/editbox_wdth"
+            android:layout_height="wrap_content"
+            android:id="@+id/inp_Password"
+            android:text=""
+            android:textSize="@dimen/ord_txt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/password"
+            app:layout_constraintTop_toBottomOf="@+id/inp_emailId"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="@dimen/textbox_wdth"
+            android:layout_height="wrap_content"
+            android:id="@+id/passwordconf"
+            android:text="Retype \nPassword: "
+            android:textSize="@dimen/ord_txt"
+            app:layout_constraintEnd_toStartOf="@+id/inp_Passwordconf"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inp_Password"
+            app:layout_constraintBottom_toBottomOf="@+id/inp_Passwordconf"
+            android:layout_marginEnd="@dimen/cc_wdth"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:layout_width="@dimen/editbox_wdth"
+            android:layout_height="wrap_content"
+            android:id="@+id/inp_Passwordconf"
+            android:text=""
+            android:textSize="@dimen/ord_txt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/passwordconf"
+            app:layout_constraintTop_toBottomOf="@+id/inp_Password"
+            android:layout_marginEnd="@dimen/cc_wdth"
+            android:textColor="@color/black"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/errPopUp"
+            app:srcCompat="@drawable/ic_error_outline_red"
+            android:contentDescription="Nav Header"
+            app:layout_constraintStart_toEndOf="@+id/inp_Passwordconf"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/inp_Passwordconf"
+            app:layout_constraintBottom_toBottomOf="@+id/inp_Passwordconf"
+            android:layout_centerHorizontal="true"
+            tools:ignore="VectorDrawableCompat"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:layout_width="@dimen/textbox_wdth"
+            android:layout_height="wrap_content"
+            android:id="@+id/occupation"
+            android:text="Occupation: "
+            android:textSize="@dimen/ord_txt"
+            app:layout_constraintEnd_toStartOf="@+id/inp_occupation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inp_Passwordconf"
+            app:layout_constraintBottom_toBottomOf="@+id/inp_occupation"
+            android:layout_marginEnd="@dimen/cc_wdth"
+            android:textColor="@color/black"/>
+
+        <Spinner
+            android:layout_width="@dimen/editbox_wdth"
+            android:layout_height="wrap_content"
+            android:id="@+id/inp_occupation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/occupation"
+            android:layout_marginEnd="@dimen/cc_wdth"
+            app:layout_constraintTop_toBottomOf="@+id/inp_Passwordconf"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/loginbtn"
+            android:background="@color/submitColor"
+            android:layout_marginTop="8dp"
+            android:text="LOGIN"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/btn_txt"
+            android:layout_marginRight="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/signupbtn"
+            app:layout_constraintTop_toBottomOf="@+id/inp_occupation"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/submitColor"
+            android:id="@+id/signupbtn"
+            android:layout_marginTop="8dp"
+            android:text="SIGN UP"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/btn_txt"
+            android:layout_marginLeft="2dp"
+            app:layout_constraintStart_toEndOf="@+id/loginbtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inp_occupation"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

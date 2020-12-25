@@ -1,0 +1,1 @@
+DELETE FROM no_generator WHERE req_type='cust_id';

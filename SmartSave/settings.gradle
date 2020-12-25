@@ -1,0 +1,2 @@
+rootProject.name='Smart Save'
+include ':app'

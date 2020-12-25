@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="3dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please Enter the OTP:"
+            android:textAlignment="center"
+            android:layout_marginBottom="10sp"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"/>
+
+        <EditText
+            android:id="@+id/otp_inp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10sp"
+            android:inputType="textPassword"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+                <Button
+                    android:layout_width="@dimen/editbox_wdth"
+                    android:layout_height="wrap_content"
+                    android:text="Verify"
+                    android:padding="4dp"
+                    android:background="@color/submitColor"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/btn_txt"
+                    android:id="@+id/otp_verify"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/otp_clear"/>
+
+                <Button
+                    android:id="@+id/otp_clear"
+                    android:layout_width="@dimen/editbox_wdth"
+                    android:padding="4dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cancelColor"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/btn_txt"
+                    android:text="Cancel"
+                    android:layout_toRightOf="@id/otp_verify"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/otp_verify"
+                    app:layout_constraintStart_toEndOf="@id/otp_verify"
+                    app:layout_constraintBottom_toBottomOf="@id/otp_verify"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

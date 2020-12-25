@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/enterName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="false"
+        android:layout_marginTop="10dp"
+        android:text="Enter the Name"
+        android:textAlignment="center"
+        android:textSize="30dp" />
+
+    <EditText
+        android:id="@+id/textName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:keyboardNavigationCluster="true"
+        android:layout_margin="10dp"
+        android:paddingTop="10dp"/>
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.infotrends.in.smartsave.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_HomeFragment_to_LoginFragment"
+            app:destination="@id/fragment_login" />
+        <action
+            android:id="@+id/action_HomeFragment_to_SignUpFragment"
+            app:destination="@id/fragment_signup" />
+        <action
+            android:id="@+id/action_nav_home_to_settingsview"
+            app:destination="@id/settingsview" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_login"
+        android:name="com.infotrends.in.smartsave.ui.register.LoginFragment"
+        android:label="@string/home_second"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_LoginFragment_to_HomeFragment"
+            app:destination="@id/nav_home" />
+
+        <action
+            android:id="@+id/action_LoginFragment_to_SignUFragment"
+            app:destination="@id/fragment_signup" />
+
+        <action
+            android:id="@+id/action_LoginFragment_to_OTPFragment"
+            app:destination="@id/otpview" />
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_signup"
+        android:name="com.infotrends.in.smartsave.ui.register.SignUpFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_signup">
+
+        <action
+            android:id="@+id/action_SignUFragment_to_LoginFragment"
+            app:destination="@id/fragment_login" />
+
+        <action
+            android:id="@+id/action_LoginFragment_to_OTPFragment"
+            app:destination="@id/otpview" />
+    </fragment>
+    <fragment
+        android:id="@+id/otpview"
+        android:name="com.infotrends.in.smartsave.ui.register.OtpFragment"
+        android:label="Verify Account"
+        tools:layout="@layout/otpview">
+
+        <action
+            android:id="@+id/action_OTPFragment_to_HomeScreen"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsview"
+        android:name="com.infotrends.in.smartsave.ui.settings.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings">
+    </fragment>
+
+    <fragment
+        android:id="@+id/send_fragment"
+        android:name="com.infotrends.in.smartsave.ui.send.SendFragment"
+        tools:layout="@layout/fragment_send"
+        android:label="Review"></fragment>
+    <fragment
+        android:id="@+id/nav_share"
+        android:name="com.infotrends.in.smartsave.ui.send.ShareFragment"
+        android:label="Share via..."/>
+
+</navigation>

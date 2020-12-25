@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetDialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:gravity="bottom"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/activity_horizontal_margin">
+
+    <androidx.core.widget.NestedScrollView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/foption_heading"
+                android:text="Options:"
+                android:textStyle="bold"
+                android:textSize="@dimen/btn_txt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:paddingBottom="@dimen/ord_txt"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/foption_open"
+                android:padding="@dimen/btn_txt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/foption_heading"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:text="Open File"
+                android:background="@drawable/submit_btn"
+                android:shadowColor="#A8A8A8"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/foption_download"
+                android:padding="@dimen/btn_txt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/foption_open"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:text="Download File"
+                android:background="@drawable/submit_btn"
+                android:shadowColor="#A8A8A8"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/foption_delete"
+                android:padding="@dimen/btn_txt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/foption_download"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:text="Delete File"
+                android:background="@drawable/submit_btn"
+                android:shadowColor="#A8A8A8"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Make File Public:"
+                android:textSize="@dimen/btn_txt"
+                android:textColor="@color/black"
+                android:padding="@dimen/btn_txt"
+                android:textStyle="bold"
+                android:id="@+id/make_public_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/foption_delete" />
+
+            <Switch
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/btn_txt"
+                android:id="@+id/foption_make_public"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/make_public_text"
+                app:layout_constraintTop_toBottomOf="@+id/foption_delete" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/foption_shareFile"
+                android:padding="@dimen/btn_txt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/foption_make_public"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:text="Share File"
+                android:background="@drawable/submit_btn"
+                android:shadowColor="#A8A8A8"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+                android:textColor="@color/white"/>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/foption_getPublicUrl"
+                android:padding="@dimen/btn_txt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/foption_shareFile"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:text="Get Sharable URL"
+                android:background="@drawable/submit_btn"
+                android:shadowColor="#A8A8A8"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+                android:textColor="@color/white"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

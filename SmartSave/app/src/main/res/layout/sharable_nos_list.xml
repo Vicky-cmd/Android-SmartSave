@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetDialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:gravity="bottom"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:padding="@dimen/btn_txt">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Shared Numbers"
+            android:id="@+id/shared_dispay"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:padding="@dimen/ord_txt"
+            android:textAllCaps="true"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/shared_ph_no_edit_text"
+            app:layout_constraintTop_toTopOf="@+id/shared_add_num"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:padding="4dp"
+            android:hint="Enter a Phone No."
+            app:layout_constraintEnd_toStartOf="@+id/shared_add_num"
+            app:layout_constraintBottom_toBottomOf="@+id/shared_add_num"
+            />
+
+        <Button
+            android:id="@+id/shared_add_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/submitColor"
+            android:padding="2dp"
+            android:text="ADD"
+            android:textColor="@color/white"
+            android:textSize="@dimen/btn_txt"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/shared_ph_no_edit_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shared_dispay" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/shared_recycleview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/btn_txt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shared_ph_no_edit_text" />
+
+        <Button
+            android:id="@+id/shared_apply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/submitColor"
+            android:padding="4dp"
+            android:layout_margin="@dimen/btn_txt"
+            android:text="Apply Changes"
+            android:textColor="@color/white"
+            android:textSize="@dimen/btn_txt"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shared_recycleview" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

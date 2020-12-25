@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:id="@+id/img_res"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:src="@drawable/ic_delete_outline_black_18dp"
+                app:layout_constraintBottom_toBottomOf="@+id/res_text"/>
+            <TextView
+                android:id="@+id/res_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reset Thumbnail Data"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img_res"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toStartOf="@+id/res_switch"
+                android:textColor="@color/black"
+                android:textSize="20dp"/>
+            <Switch
+                android:id="@+id/res_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/res_text"/>
+
+
+    <ImageView
+        android:id="@+id/img_res_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_delete_sweep_black_18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/res_all_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/res_text" />
+
+    <TextView
+        android:id="@+id/res_all_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset All Local Data \nOf the App \n (Cannot be \n Undone)"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/ord_txt"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/res_all_switch"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toEndOf="@+id/img_res_all"
+        app:layout_constraintTop_toBottomOf="@+id/res_text" />
+
+    <Switch
+        android:id="@+id/res_all_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/res_all_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/res_all_text" />
+
+
+    <Button
+        android:id="@+id/delete_all_account_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:background="@drawable/submit_btn"
+        android:gravity="bottom"
+        android:padding="@dimen/btn_txt"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:layout_marginBottom="@dimen/btn_txt"
+        android:text="Deactivate and Delete All Account Data"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

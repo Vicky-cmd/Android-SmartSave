@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Smart Save</string>
+    <string name="search_hint">Search Files</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android User</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_subtitle_login_time">Login Time : </string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="home_second">Home Second</string>
+
+
+    <string-array name="occ_array">
+        <item>Student</item>
+        <item>Professional</item>
+        <item>Other</item>
+    </string-array>
+
+    <string name="saved_ActionType">Saved_Action_Type</string>
+    <string name="saved_login_phNo">Login_PhoneNo</string>
+    <string name="saved_login_password">Login_Password</string>
+
+    <string name="saved_signup_phNo">SignUp_PhoneNo</string>
+    <string name="saved_signup_usrname">SignUp_Username</string>
+    <string name="saved_signup_password">SignUp_Username</string>
+
+
+    <string name="file_name">file_name</string>
+    <string name="file_Type">file_Type</string>
+    <string name="file_TimeStamp">file_TimeStamp</string>
+    <string name="shared_no">Shared_No</string>
+</resources>
