@@ -316,7 +316,8 @@ public class FilesAdapter extends RecyclerView.Adapter<FilesAdapter.FilesListHol
                         (oModel.getIsSharedStatus().equalsIgnoreCase("P") || oModel.getIsSharedStatus().equalsIgnoreCase("S"))) {
                     pth = "Shared Files/" + pth;
                 }
-                File inpFile = new File(rootMediaDir + pth, oModel.getFileName());
+                String selFileName = FilesModOrc.getFileName(oModel.getFileName());
+                File inpFile = new File(rootMediaDir + pth, selFileName);
                 if(inpFile.exists()) {
                     Uri path = FileProvider.getUriForFile(oAppProps.getContext(), BuildConfig.APPLICATION_ID + ".provider", inpFile);//Uri.fromFile(inpFile);
                     String type = "";

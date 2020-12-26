@@ -279,13 +279,6 @@ public class LoginOrc {
                     jsonReq.put("isFetchSharable", oUserModel.getIsSharedOrPubFile()!=null?oUserModel.getIsSharedOrPubFile():"N");
                     jsonReq.put("fileId", oAppProps.getCurrSharedFileID());
                     break;
-                case "createFolder":
-                    jsonReq.put("phone_no", oUserModel.getPhone_no());
-                    jsonReq.put("otp", oUserModel.getAuthCode());
-                    jsonReq.put("file_name", oUserModel.getFileModel().getFileName());
-                    jsonReq.put("username", oUserModel.getUsername());
-                    jsonReq.put("target_Dir", AppProps.getInstance().getCurrDir());
-                    break;
                 case "s3Connect":
                     jsonReq.put("phone_no", oUserModel.getPhone_no());
                     jsonReq.put("otp", oUserModel.getAuthCode());
@@ -299,7 +292,20 @@ public class LoginOrc {
                     break;
                 case "makePublic":
                     jsonReq.put("pubStat", oUserModel.getFileModel().getIsPublic());
+                    jsonReq.put("phone_no", oUserModel.getPhone_no());
+                    jsonReq.put("otp", oUserModel.getAuthCode());
+                    jsonReq.put("file_name", FilesModOrc.getFileName(oUserModel.getFileModel().getFileName()));
+                    jsonReq.put("username", oUserModel.getUsername());
+                    jsonReq.put("target_Dir", AppProps.getInstance().getCurrDir());
+                    break;
                 case "getSharableUrl":
+                    jsonReq.put("phone_no", oUserModel.getPhone_no());
+                    jsonReq.put("otp", oUserModel.getAuthCode());
+                    jsonReq.put("file_name", FilesModOrc.getFileName(oUserModel.getFileModel().getFileName()));
+                    jsonReq.put("username", oUserModel.getUsername());
+                    jsonReq.put("target_Dir", AppProps.getInstance().getCurrDir());
+                    break;
+                case "createFolder":
                 case "deleteFile":
                 case "uploadFile":
                     jsonReq.put("phone_no", oUserModel.getPhone_no());
@@ -311,7 +317,7 @@ public class LoginOrc {
                 case "updateSharedFileDtls":
                     jsonReq.put("phone_no", oUserModel.getPhone_no());
                     jsonReq.put("otp", oUserModel.getAuthCode());
-                    jsonReq.put("file_name", oUserModel.getFileModel().getFileName());
+                    jsonReq.put("file_name", FilesModOrc.getFileName(oUserModel.getFileModel().getFileName()));
                     jsonReq.put("username", oUserModel.getUsername());
                     jsonReq.put("target_Dir", AppProps.getInstance().getCurrDir());
                     jsonReq.put("shared_Folds", oUserModel.getFileModel().getSharedCont());
